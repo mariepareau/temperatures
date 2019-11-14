@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Oct 17 11:26:41 2019
-
-@author: install
+Conversion from Fahrenheit to Celsius and vice-versa
 """
 
 import sys
+if (len(sys.argv)!3):
+    print("""Usage: python Fahrenheit_celsius.py {F,C} te
+mp
+    converts from Fahrenheit to Celsius or vice versa. te
+mp must be number.
+    """)
+    sys.exit(1)
+    
 if sys.argv[1]=="F":
     temp = (int(sys.argv[2]) - 32)*5/9
     print(temp, " °C")
